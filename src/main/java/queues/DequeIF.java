@@ -2,10 +2,13 @@
  * Created 2014-09-03.
  */
 
-package edu.princeton.algos.queue;
-
 import java.util.Iterator;
 
+/**
+ * Interface for Deque implementations.
+ *
+ * @param <T>  - Generic item.
+ */
 public interface DequeIF<T>
 {
 
@@ -14,47 +17,47 @@ public interface DequeIF<T>
      *
      * @return
      */
-    public boolean isEmpty();
+    boolean isEmpty();
 
     /**
      * return the number of items on the deque
      *
      * @return
      */
-    public int size();
+    int size();
 
     /**
      * insert the item at the front
      *
-     * @param item
+     * @param item - generic item to be defined in callers code.
      */
-    public void addFirst(T item);
+    void addFirst(T item);
 
     /**
      * insert the item at the end
      *
-     * @param item
+     * @param item - generic item to be defined in callers code.
      */
-    public void addLast(T item);
+    void addLast(T item);
 
     /**
      * delete and return the item at the front
      *
      * @return
      */
-    public T removeFirst();
+    T removeFirst();
 
     /**
      * delete and return the item at the end
      *
      * @return
      */
-    public T removeLast();
+    T removeLast();
 
     /**
      * return an iterator over items in order from front to end
      *
      * @return
      */
-    public Iterator<T> iterator();
+    Iterator<T> iterator();
 }
